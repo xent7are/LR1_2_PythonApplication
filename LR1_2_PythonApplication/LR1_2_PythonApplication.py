@@ -18,10 +18,14 @@ element_count = journal_number + 10
 # Создание пустого списка
 random_list = []
 
-# Генерация элементов
-for i in range(element_count):
-    # Добавление в список случайного число от 5 до 1400
-    random_list.append(random.randint(min_value_in_list, max_value_in_list))
+# Функция, которая генерирует список случайных чисел в заданном диапазоне значений и количеством элементов
+def generate_random_list(min_value_in_list, max_value_in_list, element_count):
+    # Генерация элементов
+    for i in range(element_count):
+        # Добавление в список случайного числа от 5 до 1400
+        random_list.append(random.randint(min_value_in_list, max_value_in_list))
+
+    return random_list
 
 # Вывод результата
-print("Сгенерированный список: ", random_list)
+print("Сгенерированный список: ", generate_random_list(min_value_in_list, max_value_in_list, element_count))
